@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="5064" systemVersion="13E28" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="CoreCategory" representedClassName="CoreCategory" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tasks" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CoreTask" inverseName="category" inverseEntity="CoreTask" syncable="YES"/>
+    </entity>
+    <entity name="CoreTask" representedClassName="CoreTask" syncable="YES">
+        <attribute name="deadline" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="done" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="notify" optional="YES" attributeType="Boolean" defaultValueString="NO" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoreCategory" inverseName="tasks" inverseEntity="CoreCategory" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CoreCategory" positionX="135" positionY="-9" width="128" height="88"/>
+        <element name="CoreTask" positionX="-155" positionY="-18" width="128" height="118"/>
+    </elements>
+</model>
