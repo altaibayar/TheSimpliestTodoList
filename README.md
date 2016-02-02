@@ -1,2 +1,4 @@
 # TheSimpliestTodoList
-Simple todo management app
+
+Really fast made over-night todo app prototype. 
+
